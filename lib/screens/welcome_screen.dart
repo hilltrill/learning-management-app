@@ -12,28 +12,6 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
-  // final db = FirebaseFirestore.instance;
-
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   addUserToFirestore();
-  // }
-
-  // Future<void> addUserToFirestore() async {
-  //   final user = <String, dynamic>{
-  //     "first": "Ada",
-  //     "last": "Lovelace",
-  //     "born": 1815
-  //   };
-
-  //   try {
-  //     final doc = await db.collection("users").add(user);
-  //     print('DocumentSnapshot added with ID: ${doc.id}');
-  //   } catch (e) {
-  //     print('Error adding document: $e');
-  //   }
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -97,7 +75,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     padding: const EdgeInsets.symmetric(horizontal: 20.0),
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.of(context).pushNamed(MainScreen.routeName);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => MainScreen(),
+                          ),
+                        );
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blueAccent,

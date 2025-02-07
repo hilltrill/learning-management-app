@@ -4,7 +4,6 @@ import 'package:learning_management_app/screens/catalog_screen.dart';
 import 'package:learning_management_app/screens/classes_screen.dart';
 
 class DashboardScreen extends StatelessWidget {
-  static const routeName = 'dashboard-screen';
   const DashboardScreen({super.key});
 
   @override
@@ -117,8 +116,12 @@ class DashboardScreen extends StatelessWidget {
                       icon: Icons.class_outlined,
                       title: "Classes",
                       onTap: () {
-                        Navigator.of(context)
-                            .pushNamed(CatalogScreen.routeName);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ClassesScreen(),
+                          ),
+                        );
                       },
                     ),
                   ],

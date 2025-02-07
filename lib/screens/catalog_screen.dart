@@ -6,7 +6,6 @@ import '../models/item.dart';
 import 'cart_screen.dart';
 
 class CatalogScreen extends StatelessWidget {
-  static const routeName = 'catalog-screen';
   CatalogScreen({super.key});
 
   final List<Item> catalog = [
